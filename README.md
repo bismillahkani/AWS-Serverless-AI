@@ -12,7 +12,6 @@ It included the following folders:
 
 - AWS account - [Create AWS account](https://www.youtube.com/watch?v=4C7KdLijj0E)
 - AWS CLI - [Install the AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
-- User credentials - [Create access keys](https://docs.aws.amazon.com/powershell/latest/userguide/pstools-appendix-sign-up.html)
 - SAM CLI - [Install the SAM CLI](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-cli-install.html)
 - Docker - [Install Docker community edition](https://hub.docker.com/search/?type=edition&offering=community)
 
@@ -33,13 +32,40 @@ For more details : https://docs.aws.amazon.com/serverless-application-model/late
 ### Serverless application deployment:
 
 1. ` git clone --recursive https://github.com/bismillahkani/AWS-Serverless-AI.git`
-2. Download the model weights for CLIP model from https://openaipublic.azureedge.net/clip/models/40d365715913c9da98579312b702a82c18be219cc2a73407c4526f58eba950af/ViT-B-32.pt and copy the weights to `/SAM/clip_crop/app/weights`
-3. `cd ~/SAM/clip_crop`
+
+2. Create IAM user with following permissions, 
+   - AWSLambda_FullAccess
+   - AmazonAPIGatewayAdministrator
+   - AWSCloudFormationFullAccess
+   - AmazonEC2ContainerRegistryFullAccess
+   - AmazonS3FullAccess
+   - CloudWatchLogsFullAccess
+   
+3. IAM User access key - [Create access keys](https://docs.aws.amazon.com/powershell/latest/userguide/pstools-appendix-sign-up.html)
+
 4. open terminal and run `aws configure`. Enter Access key and Secret key.
-5. open terminal and run `sam build`
-6. run `sam deploy —guided` and follow the instructions as shown in terminal
-7. Once deployed, copy the API url from Outputs and update the `/SAM/clip_crop/app/testapi.py`
-8. Run `testapi.py`
+
+   ##### Digit Classifier application
+
+5. `cd ~/SAM/digit_classifier`
+
+6. open terminal and run `sam build`
+
+7. run `sam deploy —guided` and follow the instructions as shown in terminal
+
+8. Once deployed, copy the API url from Outputs and test it in POSTMAN`
+
+   ##### Clip Crop application [Homework]
+
+9. For clip_crop application, change directory `cd ~/SAM/clip_crop` 
+
+10. Download the model weights for CLIP model from https://openaipublic.azureedge.net/clip/models/40d365715913c9da98579312b702a82c18be219cc2a73407c4526f58eba950af/ViT-B-32.pt and copy the weights to `/SAM/clip_crop/app/weights`
+
+11. run `sam build` and `sam deploy --guided`
+
+12. Once deployed, copy the API url of clip_crop from Outputs and update the `/SAM/clip_crop/app/testapi.py`
+
+13. Run `testapi.py`
 
 ## Sagemaker serverless
 
