@@ -1,0 +1,3 @@
+[submodule "SAM/clip_crop/app/yolov5"]
+	path = SAM/clip_crop/app/yolov5
+	url = https://github.com/ultralytics/yolov5
