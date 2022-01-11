@@ -32,7 +32,7 @@ For more details : https://docs.aws.amazon.com/serverless-application-model/late
 
 ### Serverless application deployment:
 
-1. `git clone https://github.com/bismillahkani/Serverless-AI.git`
+1. ` git clone --recursive https://github.com/bismillahkani/AWS-Serverless-AI.git`
 2. Download the model weights for CLIP model from https://openaipublic.azureedge.net/clip/models/40d365715913c9da98579312b702a82c18be219cc2a73407c4526f58eba950af/ViT-B-32.pt and copy the weights to `/SAM/clip_crop/app/weights`
 3. `cd ~/SAM/clip_crop`
 4. open terminal and run `aws configure`. Enter Access key and Secret key.
