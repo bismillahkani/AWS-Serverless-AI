@@ -34,12 +34,14 @@ For more details : https://docs.aws.amazon.com/serverless-application-model/late
 1. ` git clone --recursive https://github.com/bismillahkani/AWS-Serverless-AI.git`
 
 2. Create IAM user with following permissions, 
+   - IAMFullAccess
    - AWSLambda_FullAccess
    - AmazonAPIGatewayAdministrator
    - AWSCloudFormationFullAccess
    - AmazonEC2ContainerRegistryFullAccess
    - AmazonS3FullAccess
    - CloudWatchLogsFullAccess
+   - AmazonEventBridgeFullAccess
    
 3. IAM User access key - [Create access keys](https://docs.aws.amazon.com/powershell/latest/userguide/pstools-appendix-sign-up.html)
 
