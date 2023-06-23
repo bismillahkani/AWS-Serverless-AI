@@ -75,6 +75,9 @@ For more details : https://docs.aws.amazon.com/serverless-application-model/late
 2. Upload the serverless_inference.ipynb notebook
 3. Run cell, deploy serverless endpoint and do inference
 
+## Demo
+https://sam-bkvgvd906y7.streamlit.app/
+
 ## Cost
 
 I have not investigated the free tier usage for this workshop. Hence cannot guarantee that you will not be charged. You can refer the below AWS pricing details,

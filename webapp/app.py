@@ -5,7 +5,7 @@ import streamlit as st
 from io import BytesIO
 from PIL import Image
 
-image = Image.open("logo.jpeg")
+image = Image.open("webapp/logo.jpeg")
 st.image(image, width=200)
 st.markdown("AWS User Group Madurai")
 
