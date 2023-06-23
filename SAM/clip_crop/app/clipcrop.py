@@ -9,7 +9,7 @@ class ClipCrop():
 
     def __init__(self):
         self.dirpath = tempfile.mkdtemp()
-        self.yolo_model = torch.hub.load('/opt/ml/yolov5', 'custom', path='/opt/ml/weights/yolov5s.pt', source='local')
+        self.yolo_model = torch.hub.load('/opt/ml/yolov5', 'custom', path='/opt/ml/weights/best.pt', source='local')
         self.device = "cuda" if torch.cuda.is_available() else "cpu"
         self.clip_model, self.clip_preprocess = clip.load("/opt/ml/weights/ViT-B-32.pt", device=self.device)
 
