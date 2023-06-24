@@ -12,7 +12,7 @@ st.markdown("AWS User Group Madurai")
 st.header(f"Serverless AI Demo")
 st.markdown("The Clip Crop Serverless AI Demo is an interactive application that combines the cutting-edge technology of serverless computing with the advanced image and text understanding of the CLIP model.")
 
-api_url = st.text_input("Enter api url", placeholder="Enter api url..",)
+api_url = st.text_input("Enter api url", placeholder="Enter api url..",, type="password")
 image_url = st.text_input("Enter image url", placeholder="Enter image url..",)
 search_query = st.text_input("Enter search query", placeholder="Enter your search query..")
 
